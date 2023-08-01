@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Ruddro Code Here */
+::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+#tryAgain,
+#downloadButton,
+#shareButton {
+  display: none;
+}
+
+#downloadButton {
+  float: left;
+}
+
+#qrcode-container {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+#qrcode-container img {
+  border: 4px solid white;
+}
+
+/* animation background start here-------------------- */
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/* animation background end here-------------------- */
+
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ height: 80vh; 
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.253);
+
+  width: 100%;
+
+  max-width: 800px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  min-height: 500px;
+  display: flex;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px;
+}
+
+.heading
+{
+  
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 70px;
+  
+  
+}
+
+.first {
+  margin-bottom: 0px;
+}
+
+.all-input {
+  padding: 20px;
+  border: 3px solid rgb(153 9 208 / 40%);
+  background-color: #f8f8f8;
+  margin-bottom: 18px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: black;
+}
+
+.second {
+  width: 4px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.401);
+  margin: auto;
+  border-radius: 20px;
+}
+
+.qr-box {
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.401);
+}
+
+.first,
+.third {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+
+/* BUTTON--------------- */
+.btn2 {
+  margin-right: 13px;
+}
+
+.btn1 {
+  margin-top: 15px;
+}
+
+/* animation button--------- */
+.button {
+  min-width: 50px;
+  min-height: 50px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #4fd1c5;
+  background: #ffffff;
+  box-shadow: 1px 9px px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(234, 234, 234, 0.2);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+button::before {
+  content: "";
+  border-radius: 20px;
+  min-width: calc(125px + 6px);
+  min-height: calc(50px + 12px);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #f9f9f9;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+
+/* responsive------- */
+@media only screen and (max-width: 767px) and (min-width: 0px) {
+
+  .second {
+    display: none;
+  }
+
+  .btn1 {
+    margin-top: 10px;
+  }
+
+
+  .heading
+{
+  
+  
+  font-size: 30px;
+  
+  
+}
+}
