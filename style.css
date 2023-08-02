@@ -271,4 +271,12 @@ button:focus::after {
   
   
 }
+
+.full-qr-section
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
 }
