@@ -278,5 +278,10 @@ button:focus::after {
   padding-bottom: 20px;
 }
 
+.container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
 
 }
